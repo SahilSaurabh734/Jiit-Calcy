@@ -1,2 +1,2 @@
 # Jiit-Calcy
-Jiit Calcy is SGPA Calculator of 7th Sem for JIIT Student. It is built using HTML, CSS, Bootstrap, Javasvcript.
+Jiit Calcy is SGPA Calculator of 7th Sem for JIIT Student. It is built using HTML, CSS, Bootstrap, Javascript.
