@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        SGPA Calculator
+    </title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/jquery.js"></script>
+    <style>
+        body{
+            margin-top:70px;
+            background:#7fffd4;
+        }
+       body, button, input{
+           font-weight: 700;
+            letter-spacing: 1.4px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        .sgpa{
+            
+            line-height: 1.5;
+            
+        }
+        .in1{
+            border: none;
+            border-top-style: none;
+            background-color: transparent;
+            color: #fff;
+            box-shadow: none;
+            text-align: center;
+        }
+        .panel-body{
+            background-color: #333;
+            box-shadow:5px 5px 10px #000;
+            border-radius: 50px;
+        }
+        p{font-size: 20px;}
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            
+                <div class="panel-body bg-primary">
+                    <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <h2 class="text-center">JIIT<hr> </h2>
+                        
+                        <h1 class="text-center sgpa"><hr><hr>STUDENT<br>SGPA<br>CALCY<hr><hr></h1><hr>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <h5 class="text-center">Enter Your Grade Points<hr></h4>
+                        <form>
+                            <input type="number" id="rf" placeholder="RF AND MICROWAVE ENGINEERING" class="in1 form-control ">
+                            <input type="number" id="oc" placeholder="OPTICAL COMMUNICATION" class="in1 form-control">
+                            <input type="number" id="ml" placeholder="MACHINE LEARNING AND STATISTICAL PATTERN RECOGNITION" class="in1 form-control ">
+                            <input type="number" id="aran" placeholder="ARAN" class="in1 form-control ">
+                            <input type="number" id="mp" placeholder="MAJOR PROJECT" class="in1 form-control">
+                            <input type="number" id="tp" placeholder="TERM PAPER" class="in1 form-control "> 
+                            <input type="number" id="st" placeholder="SUMMER TRANING VIVA" class="in1 form-control ">
+<br><input type="button" value="Calculate SGPA" onclick="calcy()" class="in1 form-control "> 
+                        </form>
+                    </div>
+                </div>
+                <div class="row"><div class="col-md-12"><br><p id="showdata" class="text-center"></p></div></div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    const calcy=  () =>{
+        let rf = document.getElementById('rf').value;
+        let oc = document.getElementById('oc').value;
+        let ml = document.getElementById('ml').value;
+        let aran = document.getElementById('aran').value;
+        let mp = document.getElementById('mp').value;
+        let tp = document.getElementById('tp').value;
+        let st = document.getElementById('st').value;
+        let totalgradepoint = (parseFloat(rf) * 4) +(parseFloat(oc) * 4) + (parseFloat(ml) * 4) + (parseFloat(aran) * 3) 
+        +(parseFloat(mp) * 4) +(parseFloat(tp) * 3) +(parseFloat(st) * 2) ; 
+        let sg = (totalgradepoint/24);
+        document.getElementById('showdata').innerHTML = `SGPA : ${sg.toFixed(1)}`
+    }
+</script>
+</body>
+</html>
